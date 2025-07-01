@@ -1,0 +1,30 @@
+# Core deep learning framework
+jittor==1.3.9.14
+
+# Scientific computing
+numpy==1.21.6
+
+# Image processing
+Pillow==9.5.0
+opencv-python==4.11.0.86
+
+# Medical image processing
+nibabel==4.0.2
+
+# Progress bars and utilities
+tqdm==4.67.1
+
+# Experiment tracking
+wandb==0.18.7
+
+# Data handling
+pandas==1.3.5
+
+# Configuration and serialization
+PyYAML==6.0.1
+
+# System utilities
+psutil==7.0.0
+
+# Python compatibility
+typing_extensions==4.7.1

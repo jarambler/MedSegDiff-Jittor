@@ -1,0 +1,15 @@
+{
+  "dataset": "refuge2",
+  "threshold": 0.5,
+  "evaluation_models": [
+    "MedSegDiff-S"
+  ],
+  "gt_dir": "data/REFUGE2/Test/Disc_Cup_Masks",
+  "results": {
+    "MedSegDiff-S": {
+      "dice": 0.8490695423603757,
+      "iou": 0.8047795772011159,
+      "num_samples": 200
+    }
+  }
+}
