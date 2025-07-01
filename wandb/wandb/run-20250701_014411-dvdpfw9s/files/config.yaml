@@ -1,0 +1,96 @@
+_wandb:
+    value:
+        cli_version: 0.18.7
+        m: []
+        python_version: 3.7.16
+        t:
+            "1":
+                - 55
+            "2":
+                - 55
+            "3":
+                - 2
+                - 13
+                - 16
+                - 23
+                - 55
+            "4": 3.7.16
+            "5": 0.18.7
+            "8":
+                - 5
+            "12": 0.18.7
+            "13": linux-x86_64
+adam_beta1:
+    value: 0.9
+adam_beta2:
+    value: 0.999
+adam_epsilon:
+    value: 1e-08
+adam_weight_decay:
+    value: 0.01
+batch_size:
+    value: 4
+cosine_restart_epochs:
+    value: 20
+data_path:
+    value: data/DDTI
+dataset:
+    value: ddti
+disable_dynamic_encoding:
+    value: false
+disable_ff_parser:
+    value: false
+early_stopping_patience:
+    value: 30
+epochs:
+    value: 50
+gradient_accumulation_steps:
+    value: 2
+image_size:
+    value: 64
+include_ablation:
+    value: true
+input_img_channels:
+    value: null
+learning_rate:
+    value: 0.0001
+load_model_from:
+    value: null
+logging_dir:
+    value: logs
+lr_scheduler:
+    value: cosine_restart
+mask_channels:
+    value: 1
+min_delta:
+    value: 1e-06
+mixed_precision:
+    value: false
+model_variant:
+    value: MedSegDiff-S
+num_workers:
+    value: 4
+output_dir:
+    value: output/train
+report_to:
+    value: wandb
+sampling_timesteps:
+    value: 100
+save_best_only:
+    value: false
+save_every:
+    value: 1
+scale_lr:
+    value: false
+self_condition:
+    value: true
+timesteps:
+    value: 100
+train_all_datasets:
+    value: false
+train_all_models:
+    value: false
+train_datasets:
+    value: null
+train_variants:
+    value: null

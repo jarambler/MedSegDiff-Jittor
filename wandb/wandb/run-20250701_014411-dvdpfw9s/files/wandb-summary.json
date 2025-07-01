@@ -1,0 +1,1 @@
+{"_runtime":30617.843473522,"epoch":50,"batch":119,"learning_rate":8.536998372026805e-05,"epoch_loss":0.02430835230431209,"_wandb":{"runtime":30627},"_step":6048,"_timestamp":1.751336069204684e+09,"batch_loss":0.009118597954511642,"mask_sum":990,"image_mean":-0.6193547248840332}

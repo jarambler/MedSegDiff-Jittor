@@ -1,0 +1,365 @@
+WandB logging initialized, logs saved to: /mnt/f/MedSegDiff-Jittor-simple/wandb
+Loading refuge2 dataset from: data/REFUGE2
+Dataset loaded: 600 samples
+Input channels: 3, Mask channels: 1
+
+Performing additional validation for refuge2...
+REFUGE2 Sample 0 - Image range: [-1.000, 0.992], shape: [3,64,64,]
+REFUGE2 Sample 0 - Mask range: [0.000, 1.000], shape: [1,64,64,], sum: 4077.0
+REFUGE2 Sample 1 - Image range: [-1.000, 0.976], shape: [3,64,64,]
+REFUGE2 Sample 1 - Mask range: [0.000, 1.000], shape: [1,64,64,], sum: 4091.0
+REFUGE2 Sample 2 - Image range: [-1.000, 1.000], shape: [3,64,64,]
+REFUGE2 Sample 2 - Mask range: [0.000, 1.000], shape: [1,64,64,], sum: 4081.0
+Non-zero masks found: 600/600
+Model config: MedSegDiff-S
+  - Downsampling levels: 2
+  - Min feature size: 16
+  - Patch size: 2
+  - Attention heads: 2
+  - Attention dim: 16
+  - Transformer depth: 1
+  - FF-Parser enabled: True
+  - Dynamic encoding enabled: True
+模型参数数据类型: {'float32'}
+参数转换统计: 0/427 参数已转换为float32
+模型已配置为GPU训练模式
+Advanced features configuration:
+  - skip_connect_condition_famps: enabled
+  - dynamic_ff_parser_attn_map: enabled
+Model parameters: 4,096,065
+Learning rate: 0.0001 -> 0.0002 (base_scale: 1.0, batch_scale: 4, capped at 0.0002)
+CosineAnnealingScheduler initialized: initial_lr=2.000000e-04, min_lr=2.000000e-07, total_epochs=50
+  - Restart every 20 epochs
+Learning rate scheduler: CosineAnnealingScheduler with restarts every 20 epochs (total_epochs=50, min_lr=2.00e-07)
+扩散模型参数数据类型: {'betas: float32', 'alphas_cumprod_prev: float32', 'alphas_cumprod: float32'}
+扩散模型已配置为float32
+
+Starting training for 50 epochs...
+Dataset size: 600
+Total batches per epoch: 150
+Total training steps: 7500
+
+Epoch 1/50
+Epoch 1/50: 100%|██████████████████████| 150/150 [02:21<00:00,  1.06batch/s, loss=0.084839, avg_loss=79.931211, sample=592/600, lr=1.80e-04]
+Explosion detected (loss=10891.32): LR 2.000000e-04 -> 1.900000e-04
+Explosion detected (loss=700.14): LR 1.900000e-04 -> 1.805000e-04
+Skipping batch due to repeated explosions
+Skipping batch due to repeated explosions
+Epoch 1/50 completed - Average Loss: 79.9312 (Batches: 148) - LR: 1.80e-04
+Warmup epoch 1/3: LR = 6.666667e-05
+New best loss: 79.931211
+Checkpoint saved: output/train/MedSegDiff-S_refuge2/checkpoints/MedSegDiff-S_refuge2_epoch_1_loss_79.9312.pkl
+
+Epoch 2/50
+Epoch 2/50: 100%|███████████████████████| 150/150 [02:18<00:00,  1.09batch/s, loss=0.126848, avg_loss=4.574856, sample=600/600, lr=6.02e-05]
+Explosion detected (loss=215.92): LR 6.666667e-05 -> 6.333333e-05
+Explosion detected (loss=210.66): LR 6.333333e-05 -> 6.016667e-05
+Epoch 2/50 completed - Average Loss: 4.5749 (Batches: 150) - LR: 6.02e-05
+Warmup epoch 2/3: LR = 1.333333e-04
+New best loss: 4.574856
+Checkpoint saved: output/train/MedSegDiff-S_refuge2/checkpoints/MedSegDiff-S_refuge2_epoch_2_loss_4.5749.pkl
+
+Epoch 3/50
+Epoch 3/50: 100%|███████████████████████| 150/150 [02:10<00:00,  1.15batch/s, loss=0.038532, avg_loss=0.510670, sample=600/600, lr=1.33e-04]
+Epoch 3/50 completed - Average Loss: 0.5107 (Batches: 150) - LR: 1.33e-04
+Warmup epoch 3/3: LR = 2.000000e-04
+New best loss: 0.510670
+Checkpoint saved: output/train/MedSegDiff-S_refuge2/checkpoints/MedSegDiff-S_refuge2_epoch_3_loss_0.5107.pkl
+
+Epoch 4/50
+Epoch 4/50: 100%|███████████████████████| 150/150 [02:05<00:00,  1.19batch/s, loss=0.040602, avg_loss=0.231710, sample=600/600, lr=2.00e-04]
+Epoch 4/50 completed - Average Loss: 0.2317 (Batches: 150) - LR: 2.00e-04
+Epoch 4: CosineAnnealing LR = 2.000000e-04
+New best loss: 0.231710
+Checkpoint saved: output/train/MedSegDiff-S_refuge2/checkpoints/MedSegDiff-S_refuge2_epoch_4_loss_0.2317.pkl
+
+Epoch 5/50
+Epoch 5/50: 100%|███████████████████████| 150/150 [02:03<00:00,  1.21batch/s, loss=0.058437, avg_loss=1.497750, sample=600/600, lr=2.00e-04]
+Epoch 5/50 completed - Average Loss: 1.4977 (Batches: 150) - LR: 2.00e-04
+Epoch 5: CosineAnnealing LR = 1.987701e-04
+Checkpoint saved: output/train/MedSegDiff-S_refuge2/checkpoints/MedSegDiff-S_refuge2_epoch_5_loss_1.4977.pkl
+
+Epoch 6/50
+Epoch 6/50: 100%|███████████████████████| 150/150 [02:01<00:00,  1.24batch/s, loss=0.041587, avg_loss=0.054359, sample=600/600, lr=1.99e-04]
+Epoch 6/50 completed - Average Loss: 0.0544 (Batches: 150) - LR: 1.99e-04
+Epoch 6: CosineAnnealing LR = 1.951105e-04
+New best loss: 0.054359
+Checkpoint saved: output/train/MedSegDiff-S_refuge2/checkpoints/MedSegDiff-S_refuge2_epoch_6_loss_0.0544.pkl
+
+Epoch 7/50
+Epoch 7/50: 100%|███████████████████████| 150/150 [02:02<00:00,  1.22batch/s, loss=1.771131, avg_loss=0.045694, sample=600/600, lr=1.95e-04]
+Epoch 7/50 completed - Average Loss: 0.0457 (Batches: 150) - LR: 1.95e-04
+Epoch 7: CosineAnnealing LR = 1.891116e-04
+New best loss: 0.045694
+Checkpoint saved: output/train/MedSegDiff-S_refuge2/checkpoints/MedSegDiff-S_refuge2_epoch_7_loss_0.0457.pkl
+
+Epoch 8/50
+Epoch 8/50: 100%|███████████████████████| 150/150 [02:04<00:00,  1.21batch/s, loss=0.097209, avg_loss=0.191678, sample=600/600, lr=1.89e-04]
+Epoch 8/50 completed - Average Loss: 0.1917 (Batches: 150) - LR: 1.89e-04
+Epoch 8: CosineAnnealing LR = 1.809208e-04
+Checkpoint saved: output/train/MedSegDiff-S_refuge2/checkpoints/MedSegDiff-S_refuge2_epoch_8_loss_0.1917.pkl
+
+Epoch 9/50
+Epoch 9/50: 100%|███████████████████████| 150/150 [02:04<00:00,  1.20batch/s, loss=0.046467, avg_loss=0.606847, sample=600/600, lr=1.81e-04]
+Epoch 9/50 completed - Average Loss: 0.6068 (Batches: 150) - LR: 1.81e-04
+Epoch 9: CosineAnnealing LR = 1.707400e-04
+Checkpoint saved: output/train/MedSegDiff-S_refuge2/checkpoints/MedSegDiff-S_refuge2_epoch_9_loss_0.6068.pkl
+
+Epoch 10/50
+Epoch 10/50: 100%|██████████████████████| 150/150 [02:05<00:00,  1.19batch/s, loss=0.013655, avg_loss=0.174651, sample=600/600, lr=1.71e-04]
+Epoch 10/50 completed - Average Loss: 0.1747 (Batches: 150) - LR: 1.71e-04
+Epoch 10: CosineAnnealing LR = 1.588197e-04
+Checkpoint saved: output/train/MedSegDiff-S_refuge2/checkpoints/MedSegDiff-S_refuge2_epoch_10_loss_0.1747.pkl
+
+Epoch 11/50
+Epoch 11/50: 100%|██████████████████████| 150/150 [02:01<00:00,  1.23batch/s, loss=0.015944, avg_loss=0.027938, sample=600/600, lr=1.59e-04]
+Epoch 11/50 completed - Average Loss: 0.0279 (Batches: 150) - LR: 1.59e-04
+Epoch 11: CosineAnnealing LR = 1.454537e-04
+New best loss: 0.027938
+Checkpoint saved: output/train/MedSegDiff-S_refuge2/checkpoints/MedSegDiff-S_refuge2_epoch_11_loss_0.0279.pkl
+
+Epoch 12/50
+Epoch 12/50: 100%|██████████████████████| 150/150 [02:00<00:00,  1.24batch/s, loss=0.010236, avg_loss=0.011513, sample=600/600, lr=1.45e-04]
+Epoch 12/50 completed - Average Loss: 0.0115 (Batches: 150) - LR: 1.45e-04
+Epoch 12: CosineAnnealing LR = 1.309708e-04
+New best loss: 0.011513
+Checkpoint saved: output/train/MedSegDiff-S_refuge2/checkpoints/MedSegDiff-S_refuge2_epoch_12_loss_0.0115.pkl
+
+Epoch 13/50
+Epoch 13/50: 100%|██████████████████████| 150/150 [02:17<00:00,  1.09batch/s, loss=0.016198, avg_loss=0.018176, sample=600/600, lr=1.31e-04]
+Epoch 13/50 completed - Average Loss: 0.0182 (Batches: 150) - LR: 1.31e-04
+Epoch 13: CosineAnnealing LR = 1.157278e-04
+Checkpoint saved: output/train/MedSegDiff-S_refuge2/checkpoints/MedSegDiff-S_refuge2_epoch_13_loss_0.0182.pkl
+
+Epoch 14/50
+Epoch 14/50: 100%|██████████████████████| 150/150 [02:05<00:00,  1.20batch/s, loss=0.007487, avg_loss=0.023068, sample=600/600, lr=1.16e-04]
+Epoch 14/50 completed - Average Loss: 0.0231 (Batches: 150) - LR: 1.16e-04
+Epoch 14: CosineAnnealing LR = 1.001000e-04
+Checkpoint saved: output/train/MedSegDiff-S_refuge2/checkpoints/MedSegDiff-S_refuge2_epoch_14_loss_0.0231.pkl
+
+Epoch 15/50
+Epoch 15/50: 100%|██████████████████████| 150/150 [02:05<00:00,  1.19batch/s, loss=0.006625, avg_loss=0.012576, sample=600/600, lr=1.00e-04]
+Epoch 15/50 completed - Average Loss: 0.0126 (Batches: 150) - LR: 1.00e-04
+Epoch 15: CosineAnnealing LR = 8.447220e-05
+Checkpoint saved: output/train/MedSegDiff-S_refuge2/checkpoints/MedSegDiff-S_refuge2_epoch_15_loss_0.0126.pkl
+
+Epoch 16/50
+Epoch 16/50: 100%|██████████████████████| 150/150 [02:13<00:00,  1.12batch/s, loss=0.006827, avg_loss=0.009878, sample=600/600, lr=8.45e-05]
+Epoch 16/50 completed - Average Loss: 0.0099 (Batches: 150) - LR: 8.45e-05
+Epoch 16: CosineAnnealing LR = 6.922920e-05
+New best loss: 0.009878
+Checkpoint saved: output/train/MedSegDiff-S_refuge2/checkpoints/MedSegDiff-S_refuge2_epoch_16_loss_0.0099.pkl
+
+Epoch 17/50
+Epoch 17/50: 100%|██████████████████████| 150/150 [02:19<00:00,  1.07batch/s, loss=0.008657, avg_loss=0.010767, sample=600/600, lr=6.92e-05]
+Epoch 17/50 completed - Average Loss: 0.0108 (Batches: 150) - LR: 6.92e-05
+Epoch 17: CosineAnnealing LR = 5.474635e-05
+Checkpoint saved: output/train/MedSegDiff-S_refuge2/checkpoints/MedSegDiff-S_refuge2_epoch_17_loss_0.0108.pkl
+
+Epoch 18/50
+Epoch 18/50: 100%|██████████████████████| 150/150 [02:20<00:00,  1.07batch/s, loss=0.026364, avg_loss=0.010590, sample=600/600, lr=5.47e-05]
+Epoch 18/50 completed - Average Loss: 0.0106 (Batches: 150) - LR: 5.47e-05
+Epoch 18: CosineAnnealing LR = 4.138025e-05
+Checkpoint saved: output/train/MedSegDiff-S_refuge2/checkpoints/MedSegDiff-S_refuge2_epoch_18_loss_0.0106.pkl
+
+Epoch 19/50
+Epoch 19/50: 100%|██████████████████████| 150/150 [02:13<00:00,  1.12batch/s, loss=0.003649, avg_loss=0.009024, sample=600/600, lr=4.14e-05]
+Epoch 19/50 completed - Average Loss: 0.0090 (Batches: 150) - LR: 4.14e-05
+Epoch 19: CosineAnnealing LR = 2.946003e-05
+New best loss: 0.009024
+Checkpoint saved: output/train/MedSegDiff-S_refuge2/checkpoints/MedSegDiff-S_refuge2_epoch_19_loss_0.0090.pkl
+
+Epoch 20/50
+Epoch 20/50: 100%|██████████████████████| 150/150 [02:10<00:00,  1.15batch/s, loss=0.010208, avg_loss=0.009785, sample=600/600, lr=2.95e-05]
+Epoch 20/50 completed - Average Loss: 0.0098 (Batches: 150) - LR: 2.95e-05
+Epoch 20: CosineAnnealing LR = 1.927920e-05
+Checkpoint saved: output/train/MedSegDiff-S_refuge2/checkpoints/MedSegDiff-S_refuge2_epoch_20_loss_0.0098.pkl
+
+Epoch 21/50
+Epoch 21/50: 100%|██████████████████████| 150/150 [02:23<00:00,  1.04batch/s, loss=0.024107, avg_loss=0.007596, sample=600/600, lr=1.93e-05]
+Epoch 21/50 completed - Average Loss: 0.0076 (Batches: 150) - LR: 1.93e-05
+Epoch 21: CosineAnnealing LR = 1.108845e-05
+New best loss: 0.007596
+Checkpoint saved: output/train/MedSegDiff-S_refuge2/checkpoints/MedSegDiff-S_refuge2_epoch_21_loss_0.0076.pkl
+
+Epoch 22/50
+Epoch 22/50: 100%|██████████████████████| 150/150 [02:25<00:00,  1.03batch/s, loss=0.005835, avg_loss=0.009702, sample=600/600, lr=1.11e-05]
+Epoch 22/50 completed - Average Loss: 0.0097 (Batches: 150) - LR: 1.11e-05
+Epoch 22: CosineAnnealing LR = 5.089454e-06
+Checkpoint saved: output/train/MedSegDiff-S_refuge2/checkpoints/MedSegDiff-S_refuge2_epoch_22_loss_0.0097.pkl
+
+Epoch 23/50
+Epoch 23/50: 100%|██████████████████████| 150/150 [02:12<00:00,  1.13batch/s, loss=0.007736, avg_loss=0.009669, sample=600/600, lr=5.09e-06]
+Epoch 23/50 completed - Average Loss: 0.0097 (Batches: 150) - LR: 5.09e-06
+Epoch 23: CosineAnnealing LR = 1.429935e-06
+Checkpoint saved: output/train/MedSegDiff-S_refuge2/checkpoints/MedSegDiff-S_refuge2_epoch_23_loss_0.0097.pkl
+
+Epoch 24/50
+Epoch 24/50: 100%|██████████████████████| 150/150 [02:23<00:00,  1.05batch/s, loss=0.004945, avg_loss=0.008836, sample=600/600, lr=1.43e-06]
+Epoch 24/50 completed - Average Loss: 0.0088 (Batches: 150) - LR: 1.43e-06
+Epoch 24: CosineAnnealing LR = 2.000000e-04
+Checkpoint saved: output/train/MedSegDiff-S_refuge2/checkpoints/MedSegDiff-S_refuge2_epoch_24_loss_0.0088.pkl
+
+Epoch 25/50
+Epoch 25/50: 100%|██████████████████████| 150/150 [01:56<00:00,  1.29batch/s, loss=0.027268, avg_loss=0.015544, sample=600/600, lr=2.00e-04]
+Epoch 25/50 completed - Average Loss: 0.0155 (Batches: 150) - LR: 2.00e-04
+Epoch 25: CosineAnnealing LR = 1.987701e-04
+Checkpoint saved: output/train/MedSegDiff-S_refuge2/checkpoints/MedSegDiff-S_refuge2_epoch_25_loss_0.0155.pkl
+
+Epoch 26/50
+Epoch 26/50: 100%|██████████████████████| 150/150 [15:19<00:00,  6.13s/batch, loss=0.005419, avg_loss=0.013428, sample=600/600, lr=1.99e-04]
+Epoch 26/50 completed - Average Loss: 0.0134 (Batches: 150) - LR: 1.99e-04
+Epoch 26: CosineAnnealing LR = 1.951105e-04
+Checkpoint saved: output/train/MedSegDiff-S_refuge2/checkpoints/MedSegDiff-S_refuge2_epoch_26_loss_0.0134.pkl
+
+Epoch 27/50
+Epoch 27/50: 100%|██████████████████████| 150/150 [02:02<00:00,  1.22batch/s, loss=0.020232, avg_loss=2.598428, sample=600/600, lr=1.85e-04]
+Explosion detected (loss=221.13): LR 1.951105e-04 -> 1.853550e-04
+Epoch 27/50 completed - Average Loss: 2.5984 (Batches: 150) - LR: 1.85e-04
+Epoch 27: CosineAnnealing LR = 1.891116e-04
+Checkpoint saved: output/train/MedSegDiff-S_refuge2/checkpoints/MedSegDiff-S_refuge2_epoch_27_loss_2.5984.pkl
+
+Epoch 28/50
+Epoch 28/50: 100%|██████████████████████| 150/150 [02:00<00:00,  1.25batch/s, loss=0.073048, avg_loss=0.078593, sample=600/600, lr=1.89e-04]
+Epoch 28/50 completed - Average Loss: 0.0786 (Batches: 150) - LR: 1.89e-04
+Epoch 28: CosineAnnealing LR = 1.809208e-04
+Checkpoint saved: output/train/MedSegDiff-S_refuge2/checkpoints/MedSegDiff-S_refuge2_epoch_28_loss_0.0786.pkl
+
+Epoch 29/50
+Epoch 29/50: 100%|██████████████████████| 150/150 [02:18<00:00,  1.08batch/s, loss=0.019005, avg_loss=3.070471, sample=600/600, lr=1.72e-04]
+Explosion detected (loss=257.95): LR 1.809208e-04 -> 1.718748e-04
+Epoch 29/50 completed - Average Loss: 3.0705 (Batches: 150) - LR: 1.72e-04
+Epoch 29: CosineAnnealing LR = 1.707400e-04
+Checkpoint saved: output/train/MedSegDiff-S_refuge2/checkpoints/MedSegDiff-S_refuge2_epoch_29_loss_3.0705.pkl
+
+Epoch 30/50
+Epoch 30/50: 100%|██████████████████████| 150/150 [02:05<00:00,  1.20batch/s, loss=0.043435, avg_loss=0.041695, sample=600/600, lr=1.71e-04]
+Epoch 30/50 completed - Average Loss: 0.0417 (Batches: 150) - LR: 1.71e-04
+Epoch 30: CosineAnnealing LR = 1.588197e-04
+Checkpoint saved: output/train/MedSegDiff-S_refuge2/checkpoints/MedSegDiff-S_refuge2_epoch_30_loss_0.0417.pkl
+
+Epoch 31/50
+Epoch 31/50: 100%|██████████████████████| 150/150 [02:05<00:00,  1.20batch/s, loss=0.008198, avg_loss=0.080749, sample=600/600, lr=1.59e-04]
+Epoch 31/50 completed - Average Loss: 0.0807 (Batches: 150) - LR: 1.59e-04
+Epoch 31: CosineAnnealing LR = 1.454537e-04
+Checkpoint saved: output/train/MedSegDiff-S_refuge2/checkpoints/MedSegDiff-S_refuge2_epoch_31_loss_0.0807.pkl
+
+Epoch 32/50
+Epoch 32/50: 100%|██████████████████████| 150/150 [02:04<00:00,  1.20batch/s, loss=0.004538, avg_loss=0.013193, sample=600/600, lr=1.45e-04]
+Epoch 32/50 completed - Average Loss: 0.0132 (Batches: 150) - LR: 1.45e-04
+Epoch 32: CosineAnnealing LR = 1.309708e-04
+Checkpoint saved: output/train/MedSegDiff-S_refuge2/checkpoints/MedSegDiff-S_refuge2_epoch_32_loss_0.0132.pkl
+
+Epoch 33/50
+Epoch 33/50: 100%|██████████████████████| 150/150 [02:02<00:00,  1.22batch/s, loss=0.008170, avg_loss=0.011919, sample=600/600, lr=1.31e-04]
+Epoch 33/50 completed - Average Loss: 0.0119 (Batches: 150) - LR: 1.31e-04
+Epoch 33: CosineAnnealing LR = 1.157278e-04
+Checkpoint saved: output/train/MedSegDiff-S_refuge2/checkpoints/MedSegDiff-S_refuge2_epoch_33_loss_0.0119.pkl
+
+Epoch 34/50
+Epoch 34/50: 100%|██████████████████████| 150/150 [01:59<00:00,  1.25batch/s, loss=0.021023, avg_loss=0.009032, sample=600/600, lr=1.16e-04]
+Epoch 34/50 completed - Average Loss: 0.0090 (Batches: 150) - LR: 1.16e-04
+Epoch 34: CosineAnnealing LR = 1.001000e-04
+Checkpoint saved: output/train/MedSegDiff-S_refuge2/checkpoints/MedSegDiff-S_refuge2_epoch_34_loss_0.0090.pkl
+
+Epoch 35/50
+Epoch 35/50: 100%|██████████████████████| 150/150 [02:01<00:00,  1.24batch/s, loss=0.005992, avg_loss=0.007739, sample=600/600, lr=1.00e-04]
+Epoch 35/50 completed - Average Loss: 0.0077 (Batches: 150) - LR: 1.00e-04
+Epoch 35: CosineAnnealing LR = 8.447220e-05
+Checkpoint saved: output/train/MedSegDiff-S_refuge2/checkpoints/MedSegDiff-S_refuge2_epoch_35_loss_0.0077.pkl
+
+Epoch 36/50
+Epoch 36/50: 100%|██████████████████████| 150/150 [01:59<00:00,  1.25batch/s, loss=0.012528, avg_loss=0.009395, sample=600/600, lr=8.45e-05]
+Epoch 36/50 completed - Average Loss: 0.0094 (Batches: 150) - LR: 8.45e-05
+Epoch 36: CosineAnnealing LR = 6.922920e-05
+Checkpoint saved: output/train/MedSegDiff-S_refuge2/checkpoints/MedSegDiff-S_refuge2_epoch_36_loss_0.0094.pkl
+
+Epoch 37/50
+Epoch 37/50: 100%|██████████████████████| 150/150 [02:00<00:00,  1.25batch/s, loss=0.010891, avg_loss=0.009678, sample=600/600, lr=6.92e-05]
+Epoch 37/50 completed - Average Loss: 0.0097 (Batches: 150) - LR: 6.92e-05
+Epoch 37: CosineAnnealing LR = 5.474635e-05
+Checkpoint saved: output/train/MedSegDiff-S_refuge2/checkpoints/MedSegDiff-S_refuge2_epoch_37_loss_0.0097.pkl
+
+Epoch 38/50
+Epoch 38/50: 100%|██████████████████████| 150/150 [02:01<00:00,  1.24batch/s, loss=0.003586, avg_loss=0.006755, sample=600/600, lr=5.47e-05]
+Epoch 38/50 completed - Average Loss: 0.0068 (Batches: 150) - LR: 5.47e-05
+Epoch 38: CosineAnnealing LR = 4.138025e-05
+New best loss: 0.006755
+Checkpoint saved: output/train/MedSegDiff-S_refuge2/checkpoints/MedSegDiff-S_refuge2_epoch_38_loss_0.0068.pkl
+
+Epoch 39/50
+Epoch 39/50: 100%|██████████████████████| 150/150 [02:02<00:00,  1.23batch/s, loss=0.004121, avg_loss=0.009557, sample=600/600, lr=4.14e-05]
+Epoch 39/50 completed - Average Loss: 0.0096 (Batches: 150) - LR: 4.14e-05
+Epoch 39: CosineAnnealing LR = 2.946003e-05
+Checkpoint saved: output/train/MedSegDiff-S_refuge2/checkpoints/MedSegDiff-S_refuge2_epoch_39_loss_0.0096.pkl
+
+Epoch 40/50
+Epoch 40/50: 100%|██████████████████████| 150/150 [02:04<00:00,  1.20batch/s, loss=0.005241, avg_loss=0.007633, sample=600/600, lr=2.95e-05]
+Epoch 40/50 completed - Average Loss: 0.0076 (Batches: 150) - LR: 2.95e-05
+Epoch 40: CosineAnnealing LR = 1.927920e-05
+Checkpoint saved: output/train/MedSegDiff-S_refuge2/checkpoints/MedSegDiff-S_refuge2_epoch_40_loss_0.0076.pkl
+
+Epoch 41/50
+Epoch 41/50: 100%|██████████████████████| 150/150 [02:03<00:00,  1.22batch/s, loss=0.005617, avg_loss=0.006649, sample=600/600, lr=1.93e-05]
+Epoch 41/50 completed - Average Loss: 0.0066 (Batches: 150) - LR: 1.93e-05
+Epoch 41: CosineAnnealing LR = 1.108845e-05
+New best loss: 0.006649
+Checkpoint saved: output/train/MedSegDiff-S_refuge2/checkpoints/MedSegDiff-S_refuge2_epoch_41_loss_0.0066.pkl
+
+Epoch 42/50
+Epoch 42/50: 100%|██████████████████████| 150/150 [02:05<00:00,  1.20batch/s, loss=0.003922, avg_loss=0.007208, sample=600/600, lr=1.11e-05]
+Epoch 42/50 completed - Average Loss: 0.0072 (Batches: 150) - LR: 1.11e-05
+Epoch 42: CosineAnnealing LR = 5.089454e-06
+Checkpoint saved: output/train/MedSegDiff-S_refuge2/checkpoints/MedSegDiff-S_refuge2_epoch_42_loss_0.0072.pkl
+
+Epoch 43/50
+Epoch 43/50: 100%|██████████████████████| 150/150 [01:59<00:00,  1.26batch/s, loss=0.004364, avg_loss=0.006391, sample=600/600, lr=5.09e-06]
+Epoch 43/50 completed - Average Loss: 0.0064 (Batches: 150) - LR: 5.09e-06
+Epoch 43: CosineAnnealing LR = 1.429935e-06
+New best loss: 0.006391
+Checkpoint saved: output/train/MedSegDiff-S_refuge2/checkpoints/MedSegDiff-S_refuge2_epoch_43_loss_0.0064.pkl
+
+Epoch 44/50
+Epoch 44/50: 100%|██████████████████████| 150/150 [02:17<00:00,  1.09batch/s, loss=0.007837, avg_loss=0.007689, sample=600/600, lr=1.43e-06]
+Epoch 44/50 completed - Average Loss: 0.0077 (Batches: 150) - LR: 1.43e-06
+Epoch 44: CosineAnnealing LR = 2.000000e-04
+Checkpoint saved: output/train/MedSegDiff-S_refuge2/checkpoints/MedSegDiff-S_refuge2_epoch_44_loss_0.0077.pkl
+
+Epoch 45/50
+Epoch 45/50: 100%|██████████████████████| 150/150 [02:17<00:00,  1.09batch/s, loss=0.275994, avg_loss=0.016230, sample=600/600, lr=2.00e-04]
+Epoch 45/50 completed - Average Loss: 0.0162 (Batches: 150) - LR: 2.00e-04
+Epoch 45: CosineAnnealing LR = 1.987701e-04
+Checkpoint saved: output/train/MedSegDiff-S_refuge2/checkpoints/MedSegDiff-S_refuge2_epoch_45_loss_0.0162.pkl
+
+Epoch 46/50
+Epoch 46/50: 100%|██████████████████████| 150/150 [02:03<00:00,  1.21batch/s, loss=0.087234, avg_loss=1.311801, sample=600/600, lr=1.99e-04]
+Epoch 46/50 completed - Average Loss: 1.3118 (Batches: 150) - LR: 1.99e-04
+Epoch 46: CosineAnnealing LR = 1.951105e-04
+Checkpoint saved: output/train/MedSegDiff-S_refuge2/checkpoints/MedSegDiff-S_refuge2_epoch_46_loss_1.3118.pkl
+
+Epoch 47/50
+Epoch 47/50: 100%|██████████████████████| 150/150 [02:01<00:00,  1.23batch/s, loss=0.007986, avg_loss=0.059228, sample=600/600, lr=1.95e-04]
+Epoch 47/50 completed - Average Loss: 0.0592 (Batches: 150) - LR: 1.95e-04
+Epoch 47: CosineAnnealing LR = 1.891116e-04
+Checkpoint saved: output/train/MedSegDiff-S_refuge2/checkpoints/MedSegDiff-S_refuge2_epoch_47_loss_0.0592.pkl
+
+Epoch 48/50
+Epoch 48/50: 100%|██████████████████████| 150/150 [02:08<00:00,  1.17batch/s, loss=0.028915, avg_loss=5.971584, sample=600/600, lr=1.80e-04]
+Explosion detected (loss=776.89): LR 1.891116e-04 -> 1.796560e-04
+Epoch 48/50 completed - Average Loss: 5.9716 (Batches: 150) - LR: 1.80e-04
+Epoch 48: CosineAnnealing LR = 1.809208e-04
+Checkpoint saved: output/train/MedSegDiff-S_refuge2/checkpoints/MedSegDiff-S_refuge2_epoch_48_loss_5.9716.pkl
+
+Epoch 49/50
+Epoch 49/50: 100%|██████████████████████| 150/150 [02:02<00:00,  1.22batch/s, loss=0.031006, avg_loss=0.378144, sample=600/600, lr=1.81e-04]
+Epoch 49/50 completed - Average Loss: 0.3781 (Batches: 150) - LR: 1.81e-04
+Epoch 49: CosineAnnealing LR = 1.707400e-04
+Checkpoint saved: output/train/MedSegDiff-S_refuge2/checkpoints/MedSegDiff-S_refuge2_epoch_49_loss_0.3781.pkl
+
+Epoch 50/50
+Epoch 50/50: 100%|██████████████████████| 150/150 [02:08<00:00,  1.16batch/s, loss=0.012262, avg_loss=0.102821, sample=600/600, lr=1.71e-04]
+Epoch 50/50 completed - Average Loss: 0.1028 (Batches: 150) - LR: 1.71e-04
+Epoch 50: CosineAnnealing LR = 1.588197e-04
+Checkpoint saved: output/train/MedSegDiff-S_refuge2/checkpoints/MedSegDiff-S_refuge2_epoch_50_loss_0.1028.pkl
+
+Training completed! Best loss: 0.0064

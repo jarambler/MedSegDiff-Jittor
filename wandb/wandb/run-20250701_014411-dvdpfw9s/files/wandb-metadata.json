@@ -1,0 +1,56 @@
+{
+  "os": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-debian-bookworm-sid",
+  "python": "3.7.16",
+  "startedAt": "2025-06-30T17:44:11.403557Z",
+  "args": [
+    "--model_variant",
+    "MedSegDiff-S",
+    "--include_ablation",
+    "--self_condition",
+    "--dataset",
+    "ddti",
+    "--epochs",
+    "50",
+    "--batch_size",
+    "4",
+    "--image_size",
+    "64",
+    "--lr_scheduler",
+    "cosine_restart",
+    "--cosine_restart_epochs",
+    "20"
+  ],
+  "program": "scripts/train_script.py",
+  "codePath": "scripts/train_script.py",
+  "email": "0123456789rambler@gmail.com",
+  "root": "/mnt/f/MedSegDiff-Jittor-simple/wandb",
+  "host": "LAPTOP",
+  "username": "root",
+  "executable": "/root/miniconda3/envs/jittor_env/bin/python",
+  "codePathLocal": "scripts/train_script.py",
+  "cpu_count": 4,
+  "cpu_count_logical": 8,
+  "gpu": "NVIDIA GeForce RTX 3050 Laptop GPU",
+  "gpu_count": 1,
+  "disk": {
+    "/": {
+      "total": "1081101176832",
+      "used": "31338643456"
+    }
+  },
+  "memory": {
+    "total": "8328019968"
+  },
+  "cpu": {
+    "count": 4,
+    "countLogical": 8
+  },
+  "gpu_nvidia": [
+    {
+      "name": "NVIDIA GeForce RTX 3050 Laptop GPU",
+      "memoryTotal": "4294967296",
+      "architecture": "Ampere"
+    }
+  ],
+  "cudaVersion": "12.9"
+}
