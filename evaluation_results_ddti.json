@@ -1,0 +1,15 @@
+{
+  "dataset": "ddti",
+  "threshold": 0.5,
+  "evaluation_models": [
+    "MedSegDiff-S"
+  ],
+  "gt_dir": "data/DDTI/Test/masks",
+  "results": {
+    "MedSegDiff-S": {
+      "dice": 0.826368195141265,
+      "iou": 0.803370446807367,
+      "num_samples": 157
+    }
+  }
+}
